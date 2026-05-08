@@ -437,3 +437,24 @@ document.addEventListener('DOMContentLoaded', function() {
         document.body.classList.remove('preload');
     });
 });
+
+// Oculta o botão 'Voltar ao Topo' no mobile quando o teclado virtual abre
+const inputs = document.querySelectorAll('input, textarea');
+const btnTop = document.getElementById('btnTop');
+
+if (btnTop) {
+    inputs.forEach(input => {
+        // Quando clica no campo (teclado sobe)
+        input.addEventListener('focus', () => {
+            if (window.innerWidth < 768) {
+                btnTop.style.display = 'none';
+            }
+        });
+        // Quando tira o foco do campo (teclado desce)
+        input.addEventListener('blur', () => {
+            if (window.innerWidth < 768) {
+                btnTop.style.display = 'flex';
+            }
+        });
+    });
+}

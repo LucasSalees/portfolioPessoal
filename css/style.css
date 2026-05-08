@@ -654,13 +654,29 @@ body {
         align-items: flex-start; 
         gap: 1rem;
     }
+    /* BLINDAGEM DO BOTÃO TOPO NO MOBILE */
     .btn-top {
-        bottom: 15px;      /* Deixa mais colado no rodapé */
-        right: 15px;       /* Deixa mais colado na lateral */
-        width: 45px;       /* Diminui sutilmente o tamanho */
-        height: 45px;
-        font-size: 1.1rem;
-        z-index: 99999;    /* Força ele a ficar por cima de tudo */
+        position: fixed !important;  /* Força a fixação na câmera, não no documento */
+        top: auto !important;        /* Mata qualquer cálculo errado de topo */
+        bottom: 20px !important;     /* Trava no fundo (longe da barra do navegador) */
+        right: 20px !important;      /* Trava na direita */
+        width: 45px !important;
+        height: 45px !important;
+        z-index: 999999 !important;  /* Fica acima de TUDO */
+        transform: none !important;  /* Desativa movimentos no eixo Y que causam o bug */
+    }
+
+    /* Como tiramos o transform, controlamos a aparição apenas pelo fade (opacidade) */
+    .btn-top:not(.show) {
+        opacity: 0 !important;
+        visibility: hidden !important;
+        pointer-events: none !important;
+    }
+
+    .btn-top.show {
+        opacity: 1 !important;
+        visibility: visible !important;
+        pointer-events: auto !important;
     }
 }
 
