@@ -654,6 +654,14 @@ body {
         align-items: flex-start; 
         gap: 1rem;
     }
+    .btn-top {
+        bottom: 15px;      /* Deixa mais colado no rodapé */
+        right: 15px;       /* Deixa mais colado na lateral */
+        width: 45px;       /* Diminui sutilmente o tamanho */
+        height: 45px;
+        font-size: 1.1rem;
+        z-index: 99999;    /* Força ele a ficar por cima de tudo */
+    }
 }
 
 @media (max-width: 480px) {
