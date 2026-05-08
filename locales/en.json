@@ -150,5 +150,11 @@
   "modal-success-desc": "Your message was successfully delivered.",
   "modal-success-sub": "I will get back to you as soon as possible.",
   "modal-success-btn": "Close",
-  "modal-cert-desc": "Download the certificate below."
+  "modal-cert-desc": "Download the certificate below.",
+
+  "ouvemed-event-title": "Validation & Public Presentation",
+  "ouvemed-event-subtitle": "UNIP Sorocaba Transdisciplinary Colloquium (CTUS)",
+  "ouvemed-event-desc": "On May 5th and 6th, the Ouvemed platform was publicly presented on campus. It was an opportunity to demonstrate the solution in practice, gather feedback from different professionals, and validate the interface and system flow with real users outside the development environment.",
+  "ouvemed-event-presented": "Presented by",
+  "ouvemed-event-coord": "Co-coordination:"
 }

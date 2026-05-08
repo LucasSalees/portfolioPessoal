@@ -151,5 +151,11 @@
   "modal-success-desc": "Sua mensagem foi entregue com sucesso.",
   "modal-success-sub": "Retornarei o contato o mais breve possível.",
   "modal-success-btn": "Fechar",
-  "modal-cert-desc": "Faça o download do certificado abaixo."
+  "modal-cert-desc": "Faça o download do certificado abaixo.",
+
+  "ouvemed-event-title": "Validação & Apresentação Pública",
+  "ouvemed-event-subtitle": "Colóquio Transdisciplinar UNIP Sorocaba (CTUS)",
+  "ouvemed-event-desc": "Nos dias 05 e 06 de maio, a plataforma Ouvemed foi apresentada publicamente no campus. Foi a oportunidade de demonstrar a solução na prática, colher feedbacks de diferentes profissionais e validar a interface e o fluxo do sistema com usuários reais fora do ambiente de desenvolvimento.",
+  "ouvemed-event-presented": "Apresentado por",
+  "ouvemed-event-coord": "Co-coordenação:"
 }
