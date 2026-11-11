@@ -247,36 +247,34 @@ document.addEventListener('DOMContentLoaded', function() {
         ];
     }
     
-    let texts = getTypingTexts();
     let textIndex = 0;
     let charIndex = 0;
     let isDeleting = false;
-    let typingSpeed = 100;
-    
+
     function typeText() {
         if (!typingElement) return;
-        
-        texts = getTypingTexts(); 
+
+        const texts = getTypingTexts();
         const currentText = texts[textIndex];
-        
-        if (isDeleting) {
-            typingElement.textContent = currentText.substring(0, charIndex - 1);
-            charIndex--;
-            typingSpeed = 40;
-        } else {
-            typingElement.textContent = currentText.substring(0, charIndex + 1);
-            charIndex++;
-            typingSpeed = 80;
-        }
-        
-        if (!isDeleting && charIndex === currentText.length) {
-            setTimeout(() => isDeleting = true, 2000);
-        } else if (isDeleting && charIndex === 0) {
+
+        // Se o idioma mudou no meio da palavra, o novo texto pode ser mais curto
+        if (charIndex > currentText.length) charIndex = currentText.length;
+
+        charIndex += isDeleting ? -1 : 1;
+        typingElement.textContent = currentText.substring(0, charIndex);
+
+        let delay = isDeleting ? 40 : 80;
+
+        if (!isDeleting && charIndex >= currentText.length) {
+            // Palavra completa: pausa antes de começar a apagar (loop fica parado)
+            isDeleting = true;
+            delay = 2000;
+        } else if (isDeleting && charIndex <= 0) {
             isDeleting = false;
             textIndex = (textIndex + 1) % texts.length;
         }
-        
-        setTimeout(typeText, typingSpeed);
+
+        setTimeout(typeText, delay);
     }
     
     if(typingElement) typeText();
@@ -378,7 +376,7 @@ document.addEventListener('DOMContentLoaded', function() {
             const originalText = btnEnviar.innerHTML;
             
             const loadingText = currentLang === 'pt' ? 'ENVIANDO...' : 'SENDING...';
-            btnEnviar.innerHTML = `<i class="fas fa-spinner fa-spin me-2"></i> ${loadingText}`;
+            btnEnviar.innerHTML = `<span class="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true"></span> ${loadingText}`;
             btnEnviar.disabled = true;
 
             const formData = new FormData(portfolioContactForm);

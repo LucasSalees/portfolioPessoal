@@ -11,6 +11,7 @@
     /* Paleta Terrosa / Café (DARK MODE - Padrão) */
     --bg-primary: #181412;    /* Fundo principal: Marrom quase preto */
     --bg-secondary: #231d1a;  /* Fundo dos cartões: Marrom escuro leve */
+    --bg-light: rgba(255, 255, 255, 0.03); /* Blocos internos dentro dos cartões */
     --border-color: #362d29;  /* Bordas sutis */
     
     --accent-primary: #c4794f; /* Caramelo / Terracota */
@@ -44,6 +45,7 @@
     --text-secondary: #5e514a; /* Marrom acinzentado para textos */
     
     --nav-glass-bg: rgba(250, 248, 245, 0.4); /* Fundo da nav scrollada no claro */
+    --bg-light: rgba(0, 0, 0, 0.03);  /* Blocos internos dentro dos cartões no claro */
 }
 
 /* Transição suave para o body e textos quando muda de tema */
@@ -579,15 +581,20 @@ body {
     -ms-overflow-style: none; 
 }
 
-/* Animação Fade-in */
+/* Animação Fade-in
+   Usa @keyframes (e não transition/transform fixos) para não sobrescrever
+   o transform dos efeitos de hover dos cards depois que a animação termina. */
 .fade-in {
     opacity: 0;
-    transform: translateY(20px);
-    transition: all 0.6s ease-out;
 }
 .fade-in.visible {
     opacity: 1;
-    transform: translateY(0);
+    animation: fadeUp 0.6s ease-out;
+}
+
+@keyframes fadeUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to   { opacity: 1; transform: translateY(0); }
 }
 
 /* Setas de scroll (Hero) */
