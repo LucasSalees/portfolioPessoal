@@ -52,9 +52,7 @@ Este projeto não utiliza frameworks pesados (como React ou Angular), mas replic
 ├── projects/               # Páginas detalhadas de Cases de Estudo
 │   ├── case-ouvemed.html
 │   ├── case-brbee.html
-│   ├── case-ctus.html
-│   ├── case-seguranca.html
-│   └── case-contador.html
+│   └── case-ctus.html
 ├── index.html              # Página inicial da aplicação
 └── README.md               # Documentação do projeto
 ```
@@ -70,9 +68,7 @@ Neste portfólio, detalho a engenharia por trás dos meus principais projetos:
 
 * **CTUS**: Acervo digital e plataforma oficial para o Colóquio Transdisciplinar da UNIP Sorocaba.
 
-* **Segurança Elétrica**: Projeto de extensão de impacto social com foco em conscientização digital e gamificação para baixa renda.
-
-* **Contador de Amor**: Experiência interativa focada em manipulação pura de DOM e algoritmos de tempo real.
+* **Pontea**: Plataforma SaaS multiempresa que conecta o WhatsApp Business de restaurantes à Meta pelo fluxo oficial e monitora a saúde da conexão.
 
 ---
 
