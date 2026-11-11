@@ -52,7 +52,8 @@ Este projeto não utiliza frameworks pesados (como React ou Angular), mas replic
 ├── projects/               # Páginas detalhadas de Cases de Estudo
 │   ├── case-ouvemed.html
 │   ├── case-brbee.html
-│   └── case-ctus.html
+│   ├── case-ctus.html
+│   └── case-pontea.html
 ├── index.html              # Página inicial da aplicação
 └── README.md               # Documentação do projeto
 ```

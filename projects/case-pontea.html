@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Pontea - Conexão oficial do WhatsApp Business para restaurantes">
+    <title>Lucas Sales | Pontea</title>
+
+    <link rel="icon" type="image/x-icon" href="../assets/favicon.ico">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body class="preload">
+
+    <button id="btnTop" class="btn-top" aria-label="Voltar ao topo">
+        <i class="bi bi-arrow-up"></i>
+    </button>
+
+    <nav class="navbar navbar-expand-lg glass-nav fixed-top" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand accent-text d-flex align-items-center" href="../index.html#home">
+                <i class="bi bi-arrow-left me-2 fs-5"></i> <span data-i18n="nav-back">VOLTAR</span>
+            </a>
+
+            <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <div class="hamburger-icon">
+                    <span class="line"></span>
+                    <span class="line"></span>
+                    <span class="line"></span>
+                </div>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item"><a class="nav-link custom-link" href="../index.html#about" data-i18n="nav-about">SOBRE</a></li>
+                    <li class="nav-item"><a class="nav-link custom-link active" href="../index.html#projects" data-i18n="nav-projects">PROJETOS</a></li>
+                    <li class="nav-item"><a class="nav-link custom-link" href="../index.html#contact" data-i18n="nav-contact">CONTATO</a></li>
+                    <li class="nav-item"><a class="nav-link custom-link" href="#" data-bs-toggle="modal" data-bs-target="#resumeModal" data-i18n="nav-resume">CURRÍCULO</a></li>
+                    <li class="nav-item ms-lg-3 mt-3 mt-lg-0">
+                        <button id="langToggle" class="btn-action-outline py-1 px-3" style="font-size: 0.85rem;" aria-label="Alternar Idioma">
+                            <i class="bi bi-globe me-1"></i> <span id="langText">EN</span>
+                        </button>
+                        <button id="themeToggle" class="btn-action-outline py-1 px-3" style="font-size: 0.85rem;" aria-label="Alternar Tema">
+                            <i class="bi bi-sun-fill" id="themeIcon"></i>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section class="py-5 d-flex align-items-center" style="padding-top: 150px !important; min-height: 80vh;">
+            <div class="container">
+                <div class="row align-items-center mb-5">
+                    <div class="col-lg-8">
+                        <span class="badge bg-dark text-white mb-3 px-3 py-2 rounded-0" style="letter-spacing: 1px;" data-i18n="pontea-badge">SAAS & INTEGRAÇÃO OFICIAL</span>
+                        <h1 class="display-4 fw-bold mb-3 accent-text" style="font-family: var(--font-primary);">Pontea</h1>
+                        <h2 class="h4 mb-4 opacity-75" data-i18n="pontea-subtitle">Conexão Oficial com o WhatsApp Business</h2>
+                        <p class="lead" style="line-height: 1.8;" data-i18n="pontea-lead">
+                            Uma plataforma multiempresa que conecta o WhatsApp Business de restaurantes à Meta pelo fluxo oficial, protege as credenciais no backend e monitora continuamente a saúde da integração, sem mudar a rotina de atendimento da equipe.
+                        </p>
+                    </div>
+                    <div class="col-lg-4 text-lg-end mt-4 mt-lg-0">
+                        <div class="floating-card p-4">
+                            <h6 class="text-muted mb-3 text-start text-uppercase opacity-75" style="font-size: 0.8rem; letter-spacing: 1px;" data-i18n="case-status-title">Status do Projeto</h6>
+                            <p class="fw-bold text-start mb-4"><i class="bi bi-circle-fill text-success me-2"></i> <span data-i18n="pontea-status">Em Produção</span></p>
+                            <a href="https://pontea-develop.netlify.app/app/login.html" class="btn-action w-100 text-center py-3 redirect-link" data-plataforma="Plataforma Pontea" target="_blank" data-i18n="case-btn-access">
+                                ACESSAR PLATAFORMA
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row justify-content-center mt-5">
+                    <div class="col-lg-12">
+                        <div class="floating-card p-4 p-md-5">
+                            <div class="row g-5">
+                                <div class="col-md-6">
+                                    <h3 class="accent-text mb-4" style="font-family: var(--font-primary);" data-i18n="case-problem-title">O Problema</h3>
+                                    <p class="text-content" style="line-height: 1.8;" data-i18n="pontea-problem-desc">
+                                        Muitos restaurantes conectam o WhatsApp por integrações não oficiais, o que coloca o número em risco de bloqueio. Credenciais expostas e a falta de monitoramento deixam a conexão instável e dificultam perceber restrições aplicadas pela Meta antes que o atendimento seja afetado.
+                                    </p>
+                                </div>
+                                <div class="col-md-6">
+                                    <h3 class="accent-text mb-4" style="font-family: var(--font-primary);" data-i18n="pontea-solution-title">A Solução Pontea</h3>
+                                    <p class="text-content" style="line-height: 1.8;" data-i18n="pontea-solution-desc">
+                                        Desenvolvi uma plataforma que conduz a autorização oficial pela Meta (Embedded Signup), vincula cada número ao restaurante correto e acompanha a qualidade da conta, o status, a sincronização e o funcionamento do webhook. O restaurante continua atendendo normalmente pelo WhatsApp Business, e o gestor ganha visibilidade total da integração.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <hr class="my-5 opacity-25">
+                            <h3 class="accent-text mb-5 text-center" style="font-family: var(--font-primary);" data-i18n="pontea-pillars-title">Pilares da Plataforma</h3>
+
+                            <div class="row g-4">
+                                <div class="col-md-4">
+                                    <div class="p-4 border h-100" style="background: var(--bg-light);">
+                                        <i class="bi bi-whatsapp fs-1 accent-text mb-3 d-block"></i>
+                                        <h5 class="fw-bold" data-i18n="pontea-pillar1-title">Integração Oficial com a Meta</h5>
+                                        <p class="small mb-0 opacity-75" data-i18n="pontea-pillar1-desc">
+                                            Onboarding guiado pelo Embedded Signup da Meta, com suporte ao modo Coexistência para contas elegíveis do WhatsApp Business App. Cada etapa é apresentada de forma clara ao responsável pelo restaurante.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="p-4 border h-100" style="background: var(--bg-light);">
+                                        <i class="bi bi-shield-lock fs-1 accent-text mb-3 d-block"></i>
+                                        <h5 class="fw-bold" data-i18n="pontea-pillar2-title">Credenciais Protegidas</h5>
+                                        <p class="small mb-0 opacity-75" data-i18n="pontea-pillar2-desc">
+                                            Tokens criptografados e mantidos apenas no backend, nunca no navegador. O webhook registra a disponibilidade da integração sem armazenar as conversas dos clientes.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="p-4 border h-100" style="background: var(--bg-light);">
+                                        <i class="bi bi-people fs-1 accent-text mb-3 d-block"></i>
+                                        <h5 class="fw-bold" data-i18n="pontea-pillar3-title">Multiempresa e Controle de Acesso</h5>
+                                        <p class="small mb-0 opacity-75" data-i18n="pontea-pillar3-desc">
+                                            Arquitetura multi-tenant com isolamento de dados por restaurante, permissões por usuário e grupo e trilha de auditoria das ações importantes do sistema.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="py-5 min-vh-100 d-flex align-items-center">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <div class="text-center mb-5">
+                            <h2 class="section-title" data-i18n="contact-title-case">Gostou do Projeto?</h2>
+                        </div>
+                        <div class="floating-card p-4 p-md-5">
+                            <h4 class="mb-4 accent-text text-center" data-i18n="form-title">Mande uma Mensagem</h4>
+                            <form id="portfolioContactForm" action="https://formsubmit.co/ajax/d9dbf8fbb7c11e0b4f40ef681be33bf5" method="POST" class="needs-validation" novalidate>
+                                <input type="hidden" name="_subject" value="Novo contato via Portfólio (Case Pontea)!">
+                                <input type="hidden" name="_template" value="table">
+                                <input type="text" name="_honey" style="display:none">
+                                <input type="hidden" name="_captcha" value="false">
+
+                                <div class="row g-3">
+                                    <div class="col-md-6">
+                                        <input type="text" name="nome" class="form-control bg-dark text-white border-secondary custom-placeholder py-2" data-i18n="form-name" placeholder="Seu nome completo" required>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <input type="tel" name="telefone" id="telefoneInput" class="form-control bg-dark text-white border-secondary custom-placeholder py-2" data-i18n="form-phone" placeholder="(00) 00000-0000" required>
+                                    </div>
+                                    <div class="col-12">
+                                        <input type="email" name="email" class="form-control bg-dark text-white border-secondary custom-placeholder py-2" data-i18n="form-email" placeholder="Ex: seu.email@dominio.com" required>
+                                    </div>
+                                    <div class="col-12">
+                                        <textarea name="mensagem" class="form-control bg-dark text-white border-secondary custom-placeholder py-2" rows="5" data-i18n="form-msg" placeholder="Como posso ajudar no seu projeto?" required></textarea>
+                                    </div>
+                                    <div class="col-12 mt-4 d-flex justify-content-center">
+                                        <button type="submit" class="btn-action py-3 px-5" id="btnEnviarMensagem" data-i18n="form-btn">ENVIAR MENSAGEM</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer py-5 text-center mt-auto">
+        <div class="container">
+            <p class="footer-text mb-2"><span data-i18n="footer-design">Design & Desenvolvimento por</span> <span class="accent-text fw-bold">Lucas Sales</span></p>
+            <p class="footer-text small mb-0">
+                LUCAS.DEV © <span id="timestamp"></span><br>
+                <span data-i18n="footer-rights">Todos os direitos reservados.</span>
+            </p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../js/script.js"></script>
+
+    <script>
+        const savedTheme = localStorage.getItem('portfolio_theme');
+        const prefersLight = window.matchMedia("(prefers-color-scheme: light)").matches;
+        if (savedTheme === 'light' || (!savedTheme && prefersLight)) {
+            document.documentElement.setAttribute('data-theme', 'light');
+        }
+    </script>
+
+</body>
+</html>
